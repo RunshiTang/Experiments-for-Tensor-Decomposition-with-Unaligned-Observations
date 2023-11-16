@@ -10,7 +10,7 @@ Runshi Tang, Tamara Kolda, and Anru R. Zhang. Tensor Decomposition with Unaligne
 
 Requires Python3.11 and Python libraries imported in the scripts. 
 The working directories and file paths in the scripts need to be adjusted accordingly to run the scripts. 
-The simulation studies are performed on Slurm of the Social Science Computing Cooperative of UW-Madison. The real data experiments are performed on Winstat for big jobs of the Social Science Computing Cooperative of UW-Madison.
+The experiments are performed on Winstat for big jobs and Slurm of the Social Science Computing Cooperative of UW-Madison. 
 
 ## Contents
 
