@@ -27,6 +27,9 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 
 ### Real Data Experiment
 
+* All the files are in the directory `simulation/`. 
+
+
 
 
 
