@@ -29,7 +29,12 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 
 * All the files are in the directory `real_data/ECAM`.
 * `microbiome.json` and `microbiome_relative_abundance.json` are ECAM data processed by CLR and relative abundance respectively.
-* 
+* Directory `rkhs` includes the files used for the real data study involving RKHS-TD and S-RKHS-TD in the paper.
+  - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD.
+  - Directory `setting1` to `setting4` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with various R and S2.
+* Directory `grkhs_neta_d` includes the files used for the real data study involving GRKHS-TD and S-GRKHS-TD with Beta divergence loss in the paper.
+  - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD.
+  - Directory `setting1` to `setting4` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with various R and S2.
 
 
 
