@@ -27,7 +27,8 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 
 ### Real Data Experiment
 
-* All the files are in the directory `simulation/`. 
+* All the files are in the directory `real_data/ECAM`.
+* microbiome.json and microbiome_relative_abundance.json are ECAM data processed by CLR and relative abundance respectively. 
 
 
 
