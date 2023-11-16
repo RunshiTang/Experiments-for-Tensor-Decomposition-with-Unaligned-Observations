@@ -16,13 +16,12 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 
 ### Simulation Study
 
-*All the files are in the directory `simulation/`. 
+* All the files are in the directory `simulation/`. 
 
-*`generate5.R` is used to generate the data used for this simulation study. 
+* `generate5.R` is used to generate the data used for this simulation study. 
 
-*`simulation/rkhs` includes the files used for the simulation study involving RKHS-TD and S-RKHS-TD in the paper. 
-
-  +qqq
+* `simulation/rkhs` includes the files used for the simulation study involving RKHS-TD and S-RKHS-TD in the paper. 
+  - qqq
 
 ### Real Data Experiment
 
