@@ -8,7 +8,7 @@ Runshi Tang, Tamara Kolda, and Anru R. Zhang. Tensor Decomposition with Unaligne
 
 ## Setup
 
-Requires Python3.11 and Python libraries imported in the scripts. 
+Requires R (only used to generate simulation data), Python3.11, and Python libraries imported in the scripts. 
 The working directories and file paths in the scripts need to be adjusted accordingly to run the scripts. 
 The experiments are performed on Winstat for big jobs and Slurm of the Social Science Computing Cooperative of UW-Madison. 
 
@@ -16,7 +16,13 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 
 ### Simulation Study
 
-All the files are in the directory `simulaion/`
+*All the files are in the directory `simulation/`. 
+
+*`generate5.R` is used to generate the data used for this simulation study. 
+
+*`simulation/rkhs` includes the files used for the simulation study involving RKHS-TD and S-RKHS-TD in the paper. 
+
+  +qqq
 
 ### Real Data Experiment
 
