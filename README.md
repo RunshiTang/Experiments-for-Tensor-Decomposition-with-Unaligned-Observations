@@ -38,7 +38,9 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 * Directory `compare` includes the files used to generate the plot to compare CP Decomposition, Tabular FTSVD, and SRKHS−TD.
   - File `helpers_v2.py` contains the main function which implements S-RKHS-TD.
   - File `test_2.py` implements SRKHS−TD.
-  - ...
+  - File `FTSVD.R` contains the main function which implements Tabular FTSVD.
+  - File `realdata.R` implements Tabular FTSVD and CP Decomposition. This file and `FTSVD.R` are adapted from `https://github.com/Rungang/functional_tensor_svd`.
+  - The `.csv` files contain the raw ECAM data (used by `realdata.R`) and more subject information. 
   - `1.R` generates the plot. 
 
 
