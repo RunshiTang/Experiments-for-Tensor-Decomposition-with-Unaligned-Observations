@@ -17,10 +17,10 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 ### Simulation Study
 
 * All the files are in the directory `simulation/`. 
-* Directory `rkhs` includes the files used for the simulation study involving RKHS-TD and S-RKHS-TD in the paper.
+* Directory `rkhs/` includes the files used for the simulation study involving RKHS-TD and S-RKHS-TD in the paper.
   - File `generate3.R` is used to generate the data used for this simulation study.  
   - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD.
-  - Directory `setting1` and `setting2` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with target rank 2 and 1 respectively, including performing the decomposition and plotting the figures in the paper. 
+  - Directory `setting1/` and `setting2/` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with target rank 2 and 1 respectively, including performing the decomposition and plotting the figures in the paper. 
 * Directory `grkhs_poisson` includes the files used for the simulation study involving GRKHS-TD and S-GRKHS-TD in the paper.
   - File `generate5.R` is used to generate the data used for this simulation study.  
   - File `helper_counts_v3.py` contains the main function which implements GRKHS-TD and S-GRKHS-TD with Poisson loss.
@@ -28,15 +28,15 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 
 ### Real Data Experiment
 
-* All the files are in the directory `real_data/ECAM`.
+* All the files are in the directory `real_data/ECAM/`.
 * `microbiome.json` and `microbiome_relative_abundance.json` are ECAM data processed by CLR and relative abundance respectively.
-* Directory `rkhs` includes the files used for the real data study involving RKHS-TD and S-RKHS-TD in the paper.
+* Directory `rkhs/` includes the files used for the real data study involving RKHS-TD and S-RKHS-TD in the paper.
   - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD.
-  - Directory `setting1` to `setting4` contain the codes for real data study of RKHS-TD and S-RKHS-TD with various R and S2.
+  - Directory `setting1/` to `setting4/` contain the codes for real data study of RKHS-TD and S-RKHS-TD with various R and S2.
 * Directory `grkhs_neta_d` includes the files used for the real data study involving GRKHS-TD and S-GRKHS-TD with Beta divergence loss in the paper.
   - File `helper_betad.py` contains the main function which implements GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
-  - Directory `setting1` and `setting2` in `r_2` and `r_4` contain the codes for real data study of GRKHS-TD and S-GRKHS-TD with various R and S2.
-* Directory `compare` includes the files used to generate the plot to compare CP Decomposition, Tabular FTSVD, and SRKHS−TD.
+  - Directory `setting1/` and `setting2/` in `r_2/` and `r_4/` contain the codes for real data study of GRKHS-TD and S-GRKHS-TD with various R and S2.
+* Directory `compare/` includes the files used to generate the plot to compare CP Decomposition, Tabular FTSVD, and SRKHS−TD.
   - File `helpers_v2.py` contains the main function which implements S-RKHS-TD.
   - File `test_2.py` implements SRKHS−TD.
   - File `FTSVD.R` contains the main function which implements Tabular FTSVD.
