@@ -21,7 +21,7 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
   - File `generate3.R` is used to generate the data used for this simulation study.  
   - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD.
   - Directory `setting1/` and `setting2/` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with target rank 2 and 1 respectively, including performing the decomposition and plotting the figures in the paper. 
-* Directory `grkhs_poisson` includes the files used for the simulation study involving GRKHS-TD and S-GRKHS-TD in the paper.
+* Directory `grkhs_poisson/` includes the files used for the simulation study involving GRKHS-TD and S-GRKHS-TD in the paper.
   - File `generate5.R` is used to generate the data used for this simulation study.  
   - File `helper_counts_v3.py` contains the main function which implements GRKHS-TD and S-GRKHS-TD with Poisson loss.
   - File `run.py` performs the decomposition and `plot.py` plots the figures showing loss and time in the paper.
@@ -33,7 +33,7 @@ The experiments are performed on Winstat for big jobs and Slurm of the Social Sc
 * Directory `rkhs/` includes the files used for the real data study involving RKHS-TD and S-RKHS-TD in the paper.
   - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD.
   - Directory `setting1/` to `setting4/` contain the codes for real data study of RKHS-TD and S-RKHS-TD with various R and S2.
-* Directory `grkhs_neta_d` includes the files used for the real data study involving GRKHS-TD and S-GRKHS-TD with Beta divergence loss in the paper.
+* Directory `grkhs_neta_d/` includes the files used for the real data study involving GRKHS-TD and S-GRKHS-TD with Beta divergence loss in the paper.
   - File `helper_betad.py` contains the main function which implements GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
   - Directory `setting1/` and `setting2/` in `r_2/` and `r_4/` contain the codes for real data study of GRKHS-TD and S-GRKHS-TD with various R and S2.
 * Directory `compare/` includes the files used to generate the plot to compare CP Decomposition, Tabular FTSVD, and SRKHS−TD.
