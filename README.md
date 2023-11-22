@@ -9,7 +9,7 @@ Authors: Runshi Tang, Tamara Kolda, and Anru R. Zhang
 
 ## Setup
 
-This setup requires R (utilized only for generating simulation data), Python 3.11, and various Python libraries that must be imported into the scripts. Users should adjust the working directories and file paths within the scripts as necessary to ensure proper execution. 
+This setup requires R (utilized only for generating simulation data), Python 3.11, and various Python libraries that must be imported into the scripts. Users should adjust the working directories and file paths within the scripts as necessary to ensure proper execution. The original experiment environment is Winstat for Big Jobs and Slurm of Social Science Computing Cooperative in UW-Madison. 
 
 ## Contents
 
