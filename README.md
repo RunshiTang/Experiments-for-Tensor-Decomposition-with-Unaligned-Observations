@@ -9,7 +9,7 @@ Authors: Runshi Tang, Tamara Kolda, and Anru R. Zhang
 
 ## Setup
 
-This setup requires R (utilized only for generating simulation data), Python 3.11, and various Python libraries that must be imported into the scripts. Users should adjust the working directories and file paths within the scripts as necessary to ensure proper execution. The original experiment environment is Winstat for Big Jobs and Slurm of Social Science Computing Cooperative in UW-Madison. 
+This setup requires R (utilized only for generating simulation data and implementing CP Decomposition and Tabular FTSVD), Python 3.11, and various Python libraries (including `os`, `numpy`, `json`, `time`, `spicy`, `random`, `panda`, `sys`, `glob`, and `matplotlib`) that must be imported into the scripts. Users should adjust the working directories and file paths within the scripts as necessary to ensure proper execution. The original experiment environment is Winstat for Big Jobs and Slurm of Social Science Computing Cooperative in UW-Madison. 
 
 ## Contents
 
