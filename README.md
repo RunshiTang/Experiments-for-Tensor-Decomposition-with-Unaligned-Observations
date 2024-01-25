@@ -19,7 +19,7 @@ This setup requires R (utilized only for generating simulation data and implemen
 * Directory `rkhs/` includes the files used for the simulation study involving RKHS-TD and S-RKHS-TD in the paper.
   - File `generate7.R` is used to generate the data used for this simulation study.  
   - File `helpers.py` contains the main function `RKHS_microbiome` which implements RKHS-TD and S-RKHS-TD. Setting `sketch = False` will implement RKHS-TD, and `sketch = True` will implement S-RKHS-TD. 
-  - Directory `setting1/` and `setting2/` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with target rank 5 and 2 respectively, including performing the decomposition and plotting the figures in the paper. 
+  - Directory `setting1/` and `setting2/` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with target rank 5 and 2 respectively, including performing the decomposition (`run.py`) and plotting the figures in the paper (`plot.py`). 
 * Directory `grkhs_poisson/` includes the files used for the simulation study involving GRKHS-TD and S-GRKHS-TD in the paper.
   - File `generate8.R` is used to generate the data used for this simulation study.  
   - File `helper_counts_v2.py` contains the main functions which implement GRKHS-TD and S-GRKHS-TD with Poisson loss. Function `RKHS_generalized_microbiome_counts` implements GRKHS-TD, and function `RKHS_generalized_sketch_microbiome_counts` implements S-GRKHS-TD. 
