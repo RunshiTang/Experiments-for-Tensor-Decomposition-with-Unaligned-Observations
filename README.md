@@ -17,11 +17,11 @@ This setup requires R (utilized only for generating simulation data and implemen
 
 * All the files are in the directory `simulation/`. 
 * Directory `rkhs/` includes the files used for the simulation study involving RKHS-TD and S-RKHS-TD in the paper.
-  - File `generate3.R` is used to generate the data used for this simulation study.  
+  - File `generate7.R` is used to generate the data used for this simulation study.  
   - File `helpers.py` contains the main function which implements RKHS-TD and S-RKHS-TD. Setting `sketch = False` will run RKHS-TD, and `sketch = True` will run S-RKHS-TD. 
   - Directory `setting1/` and `setting2/` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with target rank 2 and 1 respectively, including performing the decomposition and plotting the figures in the paper. 
 * Directory `grkhs_poisson/` includes the files used for the simulation study involving GRKHS-TD and S-GRKHS-TD in the paper.
-  - File `generate5.R` is used to generate the data used for this simulation study.  
+  - File `generate8.R` is used to generate the data used for this simulation study.  
   - File `helper_counts_v3.py` contains the main function which implements GRKHS-TD and S-GRKHS-TD with Poisson loss.
   - File `run.py` performs the decomposition and `plot.py` plots the figures showing loss and time in the paper.
 
