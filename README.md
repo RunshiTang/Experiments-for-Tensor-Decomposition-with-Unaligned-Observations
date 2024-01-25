@@ -34,7 +34,7 @@ This setup requires R (utilized only for generating simulation data and implemen
   - Directory `rx\s2_xx` contains the codes for RKHS-TD and S-RKHS-TD with target rank r = x and s2 = xx respectively, including performing the decomposition (`run.py`) and plotting the figures in the paper (`plot.py`). 
 * Directory `grkhs_neta_d/` includes the files used for the real data study involving GRKHS-TD and S-GRKHS-TD with Beta divergence loss in the paper.
   - File `helper_betad.py` contains the main function which implements GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
-  - Directory `setting1/` and `setting2/` in `r_2/` and `r_4/` contain the codes for real data study of GRKHS-TD and S-GRKHS-TD with various R and S2.
+  - Directory `rx\s2_xx` contains the codes for GRKHS-TD and S-GRKHS-TD with target rank r = x and s2 = xx respectively, including performing the decomposition (`run.py`) and plotting the figures in the paper (`plot.py`). 
 * Directory `compare/` includes the files used to generate the plot to compare CP Decomposition, Tabular FTSVD, and SRKHS−TD.
   - File `helpers_v2.py` contains the main function that implements S-RKHS-TD.
   - File `test_2.py` implements SRKHS−TD.
