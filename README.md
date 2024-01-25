@@ -19,7 +19,7 @@ This setup requires R (utilized only for generating simulation data and implemen
     - `RKHS_generalized_counts` implements GRKHS-TD with Poisson loss.
     - `RKHS_generalized_sketch_beta_divergnece` implements S-GRKHS-TD with beta divergnece loss.
     - `RKHS_generalized_beta_divergnece` implements GRKHS-TD with beta divergence loss.
-    - In `RKHS_generalized_...`, the parameter `lambda_parameter = x` set the parameter $C_\xi = x$ in the feasible set. 
+    - In `RKHS_generalized_...`, the parameter `lambda_parameter = x` sets the parameter $C_\xi = x$ in the feasible set. 
 
 ### Simulation Study
 
