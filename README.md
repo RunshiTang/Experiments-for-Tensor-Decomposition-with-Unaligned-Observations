@@ -18,7 +18,7 @@ This setup requires R (utilized only for generating simulation data and implemen
 * All the files are in the directory `simulation/`. 
 * Directory `rkhs/` includes the files used for the simulation study involving RKHS-TD and S-RKHS-TD in the paper.
   - File `generate3.R` is used to generate the data used for this simulation study.  
-  - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD.
+  - File `helpers.py` contains the main function which implements RKHS-TD and S-RKHS-TD. Setting `sketch = False` will run RKHS-TD, and `sketch = True` will run S-RKHS-TD. 
   - Directory `setting1/` and `setting2/` contain the codes for simulation studies of RKHS-TD and S-RKHS-TD with target rank 2 and 1 respectively, including performing the decomposition and plotting the figures in the paper. 
 * Directory `grkhs_poisson/` includes the files used for the simulation study involving GRKHS-TD and S-GRKHS-TD in the paper.
   - File `generate5.R` is used to generate the data used for this simulation study.  
@@ -30,7 +30,7 @@ This setup requires R (utilized only for generating simulation data and implemen
 * All the files are in the directory `real_data/ECAM/`.
 * `microbiome.json` and `microbiome_relative_abundance.json` are ECAM data processed by CLR and relative abundance respectively.
 * Directory `rkhs/` includes the files used for the real data study involving RKHS-TD and S-RKHS-TD in the paper.
-  - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD.
+  - File `helper.py` contains the main function which implements RKHS-TD and S-RKHS-TD. Setting `sketch = False` will run RKHS-TD, and `sketch = True` will run S-RKHS-TD. 
   - Directory `setting1/` to `setting4/` contain the codes for real data study of RKHS-TD and S-RKHS-TD with various R and S2.
 * Directory `grkhs_neta_d/` includes the files used for the real data study involving GRKHS-TD and S-GRKHS-TD with Beta divergence loss in the paper.
   - File `helper_betad.py` contains the main function which implements GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
