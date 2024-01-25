@@ -14,12 +14,12 @@ This setup requires R (utilized only for generating simulation data and implemen
 ## Contents
 
 * `algorithms.py` summarizes all algorithms in the paper
-    - `RKHS ` implements RKHS-TD (with `sketch = False`) and S-RKHS-TD with `sketch = True`). The parameter `lambda_parameter = x` sets the penalty parameter $\lambda = x$ in the paper.  
-    - `RKHS_generalized_sketch_counts ` implements S-GRKHS-TD with Poisson loss.
+    - `RKHS` implements RKHS-TD (with `sketch = False`) and S-RKHS-TD with `sketch = True`). The parameter `lambda_parameter = x` sets the penalty parameter $\lambda = x$ in the paper.  
+    - `RKHS_generalized_sketch_counts` implements S-GRKHS-TD with Poisson loss.
     - `RKHS_generalized_counts` implements GRKHS-TD with Poisson loss.
     - `RKHS_generalized_sketch_beta_divergnece` implements S-GRKHS-TD with beta divergnece loss.
     - `RKHS_generalized_beta_divergnece` implements GRKHS-TD with beta divergence loss.
-    - In `RKHS_generalized_...` , the parameter `lambda_parameter = x` set the parameter $C_\xi = x$ in the feasible set. 
+    - In `RKHS_generalized_...`, the parameter `lambda_parameter = x` set the parameter $C_\xi = x$ in the feasible set. 
 
 ### Simulation Study
 
