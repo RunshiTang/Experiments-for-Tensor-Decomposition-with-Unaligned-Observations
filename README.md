@@ -13,6 +13,14 @@ This setup requires R (utilized only for generating simulation data and implemen
 
 ## Contents
 
+* `algorithms.py` summarizes all algorithms in the paper
+    - `RKHS_microbiome ` implements RKHS-TD (with `sketch = False`) and S-RKHS-TD with `sketch = True`). The parameter `lambda_parameter = x` set the penalty parameter $$\lambda$$.  
+    - `RKHS_generalized_sketch_microbiome_counts ` implements S-GRKHS-TD with Poisson loss.
+    - `RKHS_generalized_microbiome_counts` implements GRKHS-TD with Poisson loss.
+    - `RKHS_generalized_sketch_microbiome_beta_divergnece` implements S-GRKHS-TD with beta divergnece loss.
+    - `RKHS_generalized_microbiome_beta_divergnece` implements GRKHS-TD with beta divergence loss.
+    - The parameters 
+
 ### Simulation Study
 
 * All the files are in the directory `simulation/`. 
