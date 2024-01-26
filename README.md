@@ -51,6 +51,6 @@ Users need to adjust working directories and file paths in the scripts to match 
   - `helpers_v2.py`: Implements S-RKHS-TD.
   - `run.py`: Performs SRKHS−TD on the ECAM data. Setting `R=x` will generate the result for target rank x. In the example from the paper, R = 2, ..., 10. 
   - `FTSVD.R`: Contains the main function which implements Tabular FTSVD.
-  - `realdata2.R`: Implements Tabular FTSVD and CP Decomposition. This file and `FTSVD.R` from `https://github.com/Rungang/functional_tensor_svd`.
+  - `realdata2.R`: Implements Tabular FTSVD and CP Decomposition. This file and `FTSVD.R` are sourced from `https://github.com/Rungang/functional_tensor_svd`.
   - `.csv`: Contains raw ECAM data (used by `realdata2.R`) and more subject information. 
   - `2.R`: Generates results in the paper (require results from `realdata2.R` and `run.py`).
