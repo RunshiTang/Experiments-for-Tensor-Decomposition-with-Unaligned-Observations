@@ -2,8 +2,8 @@
 
 This repository contains the code scripts used in the research presented in the paper:
 
-Title: Tensor Decomposition with Unaligned Observations
-Authors: Runshi Tang, Tamara Kolda, and Anru R. Zhang
+- **Title:** Tensor Decomposition with Unaligned Observations
+- **Authors:** Runshi Tang, Tamara Kolda, and Anru R. Zhang
 
 # Reproducing Experiments
 
