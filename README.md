@@ -44,7 +44,7 @@ Users need to adjust working directories and file paths in the scripts to match 
 - Directory `rkhs/`: Contains files for the real data study with RKHS-TD and S-RKHS-TD.
   - File `helpers.py` contains the main function which implements RKHS-TD and S-RKHS-TD. Setting `sketch = False` will implement RKHS-TD, and `sketch = True` will implement S-RKHS-TD. 
   - Directory `rx/s2_xx` contains the codes for RKHS-TD and S-RKHS-TD with target rank r = x and s2 = xx respectively, including performing the decomposition (`run.py`) and plotting the figures in the paper (`plot.py`). 
-- `grkhs_neta_d/`: Includes files for the real data study with GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
+- `grkhs_beta_d/`: Includes files for the real data study with GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
   - `helper_betad.py`: Implements GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
   - `rx/s2_xx`: Contains codes for GRKHS-TD and S-GRKHS-TD with target rank `r = x` and `s2 = xx`, including decomposition (`run.py`) and plotting (`plot.py`).
 - Directory `compare/`: Files for comparing CP Decomposition, Tabular FTSVD, and SRKHS−TD.
