@@ -47,10 +47,13 @@ Users need to adjust working directories and file paths in the scripts to match 
 - `grkhs_beta_d/`: Includes files for the real data study with GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
   - `helper_betad.py`: Implements GRKHS-TD and S-GRKHS-TD with Beta divergence loss.
   - `rx/s2_xx`: Contains codes for GRKHS-TD and S-GRKHS-TD with target rank `r = x` and `s2 = xx`, including decomposition (`run.py`) and plotting (`plot.py`).
-- Directory `compare/`: Files for comparing CP Decomposition, Tabular FTSVD, and SRKHS−TD.
+- Directory `compare/`: Files for comparing CP Decomposition, Tabular FTSVD, GCP, SRKHS−TD, and G-SRKHS−TD.
   - `helpers_v2.py`: Implements S-RKHS-TD.
-  - `run.py`: Performs SRKHS−TD on the ECAM data. Setting `R=x` will generate the result for target rank x. In the example from the paper, R = 2, ..., 10. 
+  - `helper_betad.py`: Implements S-GRKHS-TD with Beta divergence loss.
+  - `RKHS.py`: Performs SRKHS−TD on the ECAM data. Setting `R=x` will generate the result for target rank x. In the example from the paper, R = 2, ..., 10.
+  - `GRKHS.py`: Performs G-SRKHS−TD on the ECAM data. Setting `R=x` will generate the result for target rank x. In the example from the paper, R = 2, ..., 10.
   - `FTSVD.R`: Contains the main function which implements Tabular FTSVD.
-  - `realdata2.R`: Implements Tabular FTSVD and CP Decomposition. This file and `FTSVD.R` are sourced from `https://github.com/Rungang/functional_tensor_svd`.
+  - `realdata2.R`: Implements Tabular FTSVD and CP Decomposition. This file and `FTSVD.R` are sourced from `https://github.com/Rungang/functional_tensor_svd` and `https://cran.r-project.org/web/packages/rTensor/`.
+  - `GCP.m`: Implements GCP with Beta divergence loss. The code is sourced from `https://www.tensortoolbox.org/gcp_opt_doc.html`. 
   - `.csv`: Contains raw ECAM data (used by `realdata2.R`) and more subject information. 
   - `2.R`: Generates results in the paper (require results from `realdata2.R` and `run.py`).
