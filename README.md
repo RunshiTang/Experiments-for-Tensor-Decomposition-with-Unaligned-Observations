@@ -53,7 +53,7 @@ Users need to adjust working directories and file paths in the scripts to match 
   - `RKHS.py`: Performs SRKHS−TD on the ECAM data. Setting `R=x` will generate the result for target rank x. In the example from the paper, R = 2, ..., 10.
   - `GRKHS.py`: Performs G-SRKHS−TD on the ECAM data. Setting `R=x` will generate the result for target rank x. In the example from the paper, R = 2, ..., 10.
   - `FTSVD.R`: Contains the main function which implements Tabular FTSVD.
-  - `realdata2.R`: Implements Tabular FTSVD and CP Decomposition. This file and `FTSVD.R` are sourced from `https://github.com/Rungang/functional_tensor_svd` and `https://cran.r-project.org/web/packages/rTensor/`.
+  - `realdata2.R`: Implements Tabular FTSVD and CP Decomposition. This file and `FTSVD.R` are sourced from (https://github.com/Rungang/functional_tensor_svd) and `https://cran.r-project.org/web/packages/rTensor/`.
   - `GCP.m`: Implements GCP with Beta divergence loss. The code is sourced from `https://www.tensortoolbox.org/gcp_opt_doc.html`. 
   - `.csv`: Contains raw ECAM data (used by `realdata2.R`) and more subject information. 
   - `2.R`: Generates results in the paper (require results from `realdata2.R`, `GCP.m`, `RKHS.py` and `GRKHS.py`).
