@@ -1,7 +1,7 @@
 
 
 import os
-os.chdir("//sscwin/dfsroot/Users/rtang56/Desktop/RKHS_new_new/Generalized_RKHS/real_data/beta_divergence/r_4/setting2")
+os.chdir("//sscwin/dfsroot/Users/rtang56/Desktop/RKHS_new_new/Generalized_RKHS/real_data/beta_divergence/r_4/s2_40")
 
 import pandas as pd
 import numpy as np
@@ -42,10 +42,10 @@ shape_tmp = (len(time_s1_csvfiles),) + np.shape(pd.read_csv(time_s1_csvfiles[0],
 time_list_list = np.zeros(shape_tmp)
 
 for i in range(len(time_s1_csvfiles)):
-    time_list_list[i,:,:] = pd.read_csv(time_s1_csvfiles[i], sep=",", header=0,index_col=0).to_numpy()    
+    time_list_list[i,:,:] = 10+pd.read_csv(time_s1_csvfiles[i], sep=",", header=0,index_col=0).to_numpy()    
 
 
-time_unsketched = pd.read_csv('time_unsketched.csv', sep=",", header=0,index_col=0).to_numpy()
+time_unsketched = 10+pd.read_csv('time_unsketched.csv', sep=",", header=0,index_col=0).to_numpy()
 acc_unsketched = pd.read_csv('acc_unsketched.csv', sep=",", header=0,index_col=0).to_numpy()
 
 acc_unsketched = acc_unsketched
@@ -60,16 +60,16 @@ color = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e37
 fig, ax = plt.subplots(figsize=(3,9/4))
 
 ax.plot(time_unsketched_mean, acc_unsketched_mean, 
-                 label ="PGD", linestyle='solid', color=color[0], linewidth=0)
+                 label ="GRKHS", linestyle='solid', color=color[0], linewidth=0)
 for i in range(np.shape(time_unsketched)[0]):
     ax.plot(time_unsketched[i,:], acc_unsketched[i,:], 
-            label ="PGD", 
+            label ="GRKHS", 
             linestyle='',
             color=color[0], 
             marker = "o",
             markersize=2, alpha=0.6)
     line1, = ax.plot(time_unsketched[i,:], acc_unsketched[i,:], 
-            label ="PGD", 
+            label ="GRKHS", 
             linestyle='dashed', color=color[0], alpha=0.4)
 line_list=[line1]    
 
@@ -77,7 +77,7 @@ for j in range(len(s1_list)):
     time_mean = np.mean(time_list_list[j], axis=0)
     acc_mean = np.mean(acc_list_list[j], axis=0)
     ax.plot(time_mean, acc_mean, 
-                     label ="PSGD, S1=" + str(s1_list[j]), 
+                     label ="S-GRKHS, S1=" + str(s1_list[j]), 
                      linestyle='solid', color=color[j+1], linewidth=0)
     
     for i in range(np.shape(time_list_list[j])[0]):
@@ -88,21 +88,23 @@ for j in range(len(s1_list)):
                 marker = "o",
                 markersize=2, alpha=0.6)
         line2, = ax.plot(time_list_list[j][i], acc_list_list[j][i], 
-                label ="PSGD, S1=" + str(s1_list[j]), 
+                label ="S-GRKHS, S1=" + str(s1_list[j]), 
                 linestyle='dashed', color=color[j+1], alpha=0.4)
     line_list += [line2]
 
 
-plt.xlabel('Time (sec)')
+plt.xlabel('Time (sec) + 10')
 plt.ylabel('Loss')
 # Put a legend below current axis
 
-plt.legend(handles = line_list, loc='upper right')
+plt.legend(handles = line_list, loc='upper right', fontsize='small')
 
 plt.tight_layout()
 
 plt.yscale('log')
+plt.xscale('log')
 plt.ylim(0.1, 10)
+plt.xlim(-10, 210)
 
 plt.savefig('beta_d_r_4_s2_40.pdf', format = 'pdf',bbox_inches='tight')
 
@@ -122,8 +124,8 @@ ticks = np.arange(len(acc_list_list[0][0]))
  
 data = np.concatenate((acc_unsketched[np.newaxis,:], acc_list_list))
 
-lable_list = ["PSGD, S1="+str(i) for i in s1_list]
-lable_list = ["PGD"] + lable_list
+lable_list = ["S-GRKHS, S1="+str(i) for i in s1_list]
+lable_list = ["GRKHS"] + lable_list
 
 # create a boxplot for two arrays separately,
 # the position specifies the location of the
@@ -251,7 +253,7 @@ for i in range(len(data)):
 
 
 lable_list = ["S1="+str(i) for i in s1_list]
-lable_list = ["PGD"] + lable_list 
+lable_list = ["GRKHS"] + lable_list 
 
 plt.boxplot(data_concatenated, sym = ".", widths = 0.8)
 
