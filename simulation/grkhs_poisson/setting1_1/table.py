@@ -1,7 +1,7 @@
 # cd "//sscwin/dfsroot/Users/rtang56/Desktop/RKHS/RKHS/simulation/setting1"
 
 import os
-os.chdir("Z:/experiment/simulation/grkhs_poisson/setting1")
+os.chdir("simulation/grkhs_poisson/setting1")
 
 import pandas as pd
 import numpy as np

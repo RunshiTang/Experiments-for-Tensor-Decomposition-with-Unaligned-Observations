@@ -1,7 +1,7 @@
 
 
 import os
-os.chdir("Z:/experiment/simulation/grkhs_poisson/setting1")
+os.chdir("simulation/grkhs_poisson/setting1")
 
 import numpy as np
 import json

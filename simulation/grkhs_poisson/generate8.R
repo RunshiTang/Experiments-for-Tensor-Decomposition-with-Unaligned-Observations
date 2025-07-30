@@ -1,4 +1,4 @@
-setwd("Z:/experiment/simulation/grkhs_poisson")
+setwd("simulation/grkhs_poisson")
 
 set.seed(0)
 

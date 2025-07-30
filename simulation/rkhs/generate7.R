@@ -1,4 +1,4 @@
-setwd("C:/Users/97671/Box/HighD/RKHS/code/simulated/poisson")
+setwd("simulation/grkhs_poisson")
 
 set.seed(0)
 
