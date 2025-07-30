@@ -11,7 +11,7 @@ library(grid)
 library(ggpubr)
 library(tidyverse)
 
-setwd("C:/Users/97671/Box/HighD/RKHS/code/functional_tensor_svd-main")
+setwd("real_data/ECAM/compare")
 
 
 

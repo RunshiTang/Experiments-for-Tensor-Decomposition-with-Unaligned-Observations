@@ -1,6 +1,6 @@
 
 import os
-os.chdir("Z:/experiment/real_data/ECAM/compare/")
+os.chdir("real_data/ECAM/compare/")
 import numpy as np
 import json
 import time

@@ -17,7 +17,7 @@ random.seed(0)
 import sys 
 import os
 
-os.chdir("Z:/experiment/real_data/ECAM/compare/")
+os.chdir("real_data/ECAM/compare/")
 
 
 from helpers_v2 import RKHS_microbiome

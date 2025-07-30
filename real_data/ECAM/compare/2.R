@@ -1,7 +1,7 @@
 library(readr)
 library(tidyverse)
 set.seed(0)
-setwd("Z:/experiment/real_data/ECAM/compare")
+setwd("real_data/ECAM/compare")
 
 acc_frame = data.frame(R = 2:10, silhouette_score = NA, 
                        Mclust = NA, Kmeans = NA)
