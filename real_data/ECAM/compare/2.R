@@ -1,7 +1,7 @@
 library(readr)
 library(tidyverse)
 set.seed(0)
-setwd("//sscwin/dfsroot/users/rtang56/Desktop/ECAM_compare")
+setwd("Z:/experiment/real_data/ECAM/compare")
 
 acc_frame = data.frame(R = 2:10, silhouette_score = NA, 
                        Mclust = NA, Kmeans = NA)
@@ -27,7 +27,7 @@ find_acc = function(R = 3){
   tmp_name = paste("PC", 1:R, sep = "")
   colnames(out_A_all_ordered) = tmp_name
   
-  demographic_data = read_csv("//sscwin/dfsroot/users/rtang56/Desktop/ECAM_compare/metauni.csv")
+  demographic_data = read_csv("metauni.csv")
   
   demographic_data = cbind(demographic_data, out_A_all_ordered)
   
@@ -71,7 +71,7 @@ find_acc_GRKHS = function(R = 4){
   tmp_name = paste("PC", 1:R, sep = "")
   colnames(out_A_all_ordered) = tmp_name
   
-  demographic_data = read_csv("//sscwin/dfsroot/users/rtang56/Desktop/ECAM_compare/metauni.csv")
+  demographic_data = read_csv("metauni.csv")
   
   demographic_data = cbind(demographic_data, out_A_all_ordered)
   
@@ -110,7 +110,7 @@ find_acc_GCP = function(R = 4){
   tmp_name = paste("PC", 1:R, sep = "")
   colnames(out_A_all_ordered) = tmp_name
   
-  demographic_data = read_csv("//sscwin/dfsroot/users/rtang56/Desktop/ECAM_compare/metauni.csv")
+  demographic_data = read_csv("metauni.csv")
   
   demographic_data = cbind(demographic_data, out_A_all_ordered)
   
@@ -148,7 +148,7 @@ for (R in 2:10) {
   acc_GRKHS_frame[acc_GRKHS_frame$R == R, -1] = find_acc_GRKHS(R)
 }
 
-load("//sscwin/dfsroot/users/rtang56/Desktop/ECAM_compare/silhouette_scores.RData")
+load("silhouette_scores.RData")
  
 silhouette_scores[["S-RKHS-TD"]] = acc_frame[[2]]
 silhouette_scores[["GCP"]] = acc_GCP_frame[[2]]
@@ -179,7 +179,7 @@ out_A_all_ordered <- read_csv(paste("GRKHS/out_A_R", R, ".csv", sep = ""),
 tmp_name = paste("PC", 1:R, sep = "")
 colnames(out_A_all_ordered) = tmp_name
 
-demographic_data = read_csv("//sscwin/dfsroot/users/rtang56/Desktop/ECAM_compare/metauni.csv")
+demographic_data = read_csv("metauni.csv")
 
 demographic_data = cbind(demographic_data, out_A_all_ordered)
 
@@ -223,7 +223,7 @@ out_A_all_ordered <- read_csv(paste("out_A_R", R, ".csv", sep = ""),
 tmp_name = paste("PC", 1:R, sep = "")
 colnames(out_A_all_ordered) = tmp_name
 
-demographic_data = read_csv("//sscwin/dfsroot/users/rtang56/Desktop/ECAM_compare/metauni.csv")
+demographic_data = read_csv("metauni.csv")
 
 demographic_data = cbind(demographic_data, out_A_all_ordered)
 

@@ -17,10 +17,9 @@ random.seed(0)
 import sys 
 import os
 
-os.chdir("//sscwin/dfsroot/Users/rtang56/Desktop/ECAM_compare")
+os.chdir("Z:/experiment/real_data/ECAM/compare/")
 
 
-sys.path.append(os.path.abspath("//sscwin/dfsroot/Users/rtang56/Desktop/ECAM_compare"))
 from helpers_v2 import RKHS_microbiome
 
 
@@ -29,7 +28,7 @@ from helpers_v2 import RKHS_microbiome
 if __name__ == "__main__":
     
     
-    with open("//sscwin/dfsroot/Users/rtang56/Desktop/ECAM_compare/microbiome.json") as f:
+    with open("microbiome.json") as f:
         microbiome = json.load(f)
     
     microbiome = list(microbiome.values())

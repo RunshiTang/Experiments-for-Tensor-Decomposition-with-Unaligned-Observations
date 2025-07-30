@@ -1,7 +1,6 @@
 
 import os
-os.chdir("//sscwin/dfsroot/Users/rtang56/Desktop/ECAM_compare")
-
+os.chdir("Z:/experiment/real_data/ECAM/compare/")
 import numpy as np
 import json
 import time
@@ -15,7 +14,7 @@ import pandas as pd
 
 import sys 
 import os
-sys.path.append(os.path.abspath("//sscwin/dfsroot/Users/rtang56/Desktop/ECAM_compare"))
+
 from helper_betad import RKHS_generalized_sketch_microbiome_beta_divergnece
 
 
@@ -39,7 +38,7 @@ if __name__ == "__main__":
     clipping_threshold = 1
     beta = -0.5 #this means beta = 0.5
     
-    with open("//sscwin/dfsroot/Users/rtang56/Desktop/ECAM_compare/microbiome_relative_abundance.json") as f:
+    with open("microbiome_relative_abundance.json") as f:
         microbiome = json.load(f)
     microbiome = list(microbiome.values())
     result_sketch = RKHS_generalized_sketch_microbiome_beta_divergnece(microbiome, 
