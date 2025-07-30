@@ -1,7 +1,7 @@
 
 
 import os
-os.chdir("//sscwin/dfsroot/Users/rtang56/Desktop/RKHS_new_new/Generalized_RKHS/real_data/beta_divergence/r_2/s2_40")
+os.chdir("Z:/experiment/real_data/ECAM/grkhs_beta_d/beta_divergence/r_2/s2_40")
 
 import pandas as pd
 import numpy as np

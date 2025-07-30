@@ -1,7 +1,7 @@
 # cd "//sscwin/dfsroot/Users/rtang56/Desktop/RKHS_new/RKHS/real_data/setting1"
 
 import os
-os.chdir("/home/r/rtang56/RKHS/RKHS/real_data/r4/s2_20")
+os.chdir("Z:/experiment/real_data/ECAM/rkhs/r4/s2_20")
 
 import numpy as np
 import json
@@ -19,7 +19,7 @@ random.seed(123)
 
 import sys 
 import os
-sys.path.append(os.path.abspath("/home/r/rtang56/RKHS/RKHS"))
+sys.path.append(os.path.abspath("../.."))
 from helpers import RKHS_microbiome
 
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     n_max = 10
     R = 4
     
-    with open("/home/r/rtang56/RKHS/data/microbiome.json") as f:
+    with open("../../../microbiome.json") as f:
         microbiome = json.load(f)
         
     microbiome = list(microbiome.values())

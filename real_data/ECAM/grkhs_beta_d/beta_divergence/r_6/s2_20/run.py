@@ -1,7 +1,7 @@
 
 
 import os
-os.chdir("/home/r/rtang56/RKHS/Generalized_RKHS/real_data/beta_divergence/r_6/s2_20")
+os.chdir("Z:/experiment/real_data/ECAM/grkhs_beta_d/beta_divergence/r_6/s2_20")
 
 import numpy as np
 import json
@@ -19,7 +19,7 @@ random.seed(1)
 
 import sys 
 import os
-sys.path.append(os.path.abspath("/home/r/rtang56/RKHS/Generalized_RKHS"))
+sys.path.append(os.path.abspath("../../"))
 from helper_betad import RKHS_generalized_sketch_microbiome_beta_divergnece
 from helper_betad import RKHS_generalized_microbiome_beta_divergnece
 
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     clipping_threshold = 1
     beta = -0.5 #this means beta = 3
     
-    with open("/home/r/rtang56/RKHS/data/microbiome_relative_abundance.json") as f:
+    with open("../../../../microbiome_relative_abundance.json") as f:
         microbiome = json.load(f)
     microbiome = list(microbiome.values())
     

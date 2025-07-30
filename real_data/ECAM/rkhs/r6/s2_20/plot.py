@@ -3,7 +3,7 @@
 
 
 import os
-os.chdir("//sscwin/dfsroot/Users/rtang56/Desktop/RKHS_new_new/RKHS/real_data/r6/s2_20")
+os.chdir("Z:/experiment/real_data/ECAM/rkhs/r6/s2_40")
 
 import pandas as pd
 import numpy as np
