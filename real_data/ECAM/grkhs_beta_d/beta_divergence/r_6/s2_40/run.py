@@ -1,7 +1,7 @@
 
 
 import os
-os.chdir("Z:/experiment/real_data/ECAM/grkhs_beta_d/beta_divergence/r_6/s2_40")
+os.chdir("real_data/ECAM/grkhs_beta_d/beta_divergence/r_6/s2_40")
 
 import numpy as np
 import json

@@ -2,7 +2,7 @@
 
 
 import os
-os.chdir("Z:/experiment/real_data/ECAM/rkhs/r4/s2_20")
+os.chdir("real_data/ECAM/rkhs/r4/s2_20")
 
 import pandas as pd
 import numpy as np

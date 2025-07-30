@@ -1,7 +1,7 @@
 # cd "//sscwin/dfsroot/Users/rtang56/Desktop/RKHS_new/RKHS/real_data/setting1"
 
 import os
-os.chdir("Z:/experiment/real_data/ECAM/rkhs/r4/s2_20")
+os.chdir("real_data/ECAM/rkhs/r4/s2_20")
 
 import numpy as np
 import json
