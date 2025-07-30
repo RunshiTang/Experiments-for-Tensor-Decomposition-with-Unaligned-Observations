@@ -1,6 +1,6 @@
 
 import os
-os.chdir("/home/r/rtang56/RKHS/RKHS/simulation/setting1")
+os.chdir("Z:/experiment/simulation/rkhs/setting1/")
 
 import numpy as np
 import json
@@ -18,7 +18,7 @@ random.seed(1)
 
 import sys 
 import os
-sys.path.append(os.path.abspath("/home/r/rtang56/RKHS/RKHS"))
+sys.path.append(os.path.abspath("../"))
 from helpers import RKHS_microbiome
 
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     R = 5
     lambda_parameter = 0.0001
     
-    with open("/home/r/rtang56/RKHS/data/simulated_count7_expected_with_noise.json") as f:
+    with open("../simulated_count7_expected_with_noise.json") as f:
         microbiome = json.load(f)
     
     acc_list = []

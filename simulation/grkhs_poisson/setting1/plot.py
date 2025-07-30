@@ -1,7 +1,7 @@
-# cd "//sscwin/dfsroot/Users/rtang56/Desktop/RKHS/RKHS/simulation/setting1"
+
 
 import os
-os.chdir("Z:/experiment/simulation/rkhs/setting1/")
+os.chdir("Z:/experiment/simulation/grkhs_poisson/setting1")
 
 import pandas as pd
 import numpy as np
@@ -25,7 +25,7 @@ acc_list_list = np.zeros(shape_tmp)
 for i in range(len(acc_s1_csvfiles)):
     acc_list_list[i,:,:] = pd.read_csv(acc_s1_csvfiles[i], sep=",", header=0,index_col=0).to_numpy()
 
-acc_list_list = (1 - acc_list_list)**2
+acc_list_list = acc_list_list + 53.2111
 
 time_s1_csvfiles = []
 for file in glob.glob("time_s1*.csv"):
@@ -42,13 +42,13 @@ shape_tmp = (len(time_s1_csvfiles),) + np.shape(pd.read_csv(time_s1_csvfiles[0],
 time_list_list = np.zeros(shape_tmp)
 
 for i in range(len(time_s1_csvfiles)):
-    time_list_list[i,:,:] = 0.1 + pd.read_csv(time_s1_csvfiles[i], sep=",", header=0,index_col=0).to_numpy()
+    time_list_list[i,:,:] = 10+pd.read_csv(time_s1_csvfiles[i], sep=",", header=0,index_col=0).to_numpy()    
 
 
-time_unsketched = 0.1 + pd.read_csv('time_unsketched.csv', sep=",", header=0,index_col=0).to_numpy()
+time_unsketched = 10+pd.read_csv('time_unsketched.csv', sep=",", header=0,index_col=0).to_numpy()
 acc_unsketched = pd.read_csv('acc_unsketched.csv', sep=",", header=0,index_col=0).to_numpy()
 
-acc_unsketched = (1-acc_unsketched)**2
+acc_unsketched = acc_unsketched + 53.2111
 
 time_unsketched_mean = np.mean(time_unsketched, axis=0)
 acc_unsketched_mean = np.mean(acc_unsketched, axis=0)
@@ -57,20 +57,19 @@ import matplotlib.pyplot as plt
 color = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
 
 
-
 fig, ax = plt.subplots(figsize=(4,3))
 
 ax.plot(time_unsketched_mean, acc_unsketched_mean, 
-                 label ="RKHS", linestyle='solid', color=color[0], linewidth=0)
+                 label ="GRKHS", linestyle='solid', color=color[0], linewidth=0)
 for i in range(np.shape(time_unsketched)[0]):
     ax.plot(time_unsketched[i,:], acc_unsketched[i,:], 
-            label ="RKHS", 
+            label ="GRKHS", 
             linestyle='',
             color=color[0], 
             marker = "o",
             markersize=2, alpha=0.6)
     line1, = ax.plot(time_unsketched[i,:], acc_unsketched[i,:], 
-            label ="RKHS", 
+            label ="GRKHS", 
             linestyle='dashed', color=color[0], alpha=0.4)
 line_list=[line1]    
 
@@ -78,33 +77,34 @@ for j in range(len(s1_list)):
     time_mean = np.mean(time_list_list[j], axis=0)
     acc_mean = np.mean(acc_list_list[j], axis=0)
     ax.plot(time_mean, acc_mean, 
-                     label ="S-RKHS, S1=" + str(s1_list[j]), 
+                     label ="S-GRKHS, S1=" + str(s1_list[j]), 
                      linestyle='solid', color=color[j+1], linewidth=0)
     
     for i in range(np.shape(time_list_list[j])[0]):
         ax.plot(time_list_list[j][i], acc_list_list[j][i], 
-                label ="S-RKHS, S1=" + str(s1_list[j]), 
+                label ="S-GRKHS, S1=" + str(s1_list[j]), 
                 linestyle='',
                 color=color[j+1],
                 marker = "o",
                 markersize=2, alpha=0.6)
         line2, = ax.plot(time_list_list[j][i], acc_list_list[j][i], 
-                label ="S-RKHS, S1=" + str(s1_list[j]), 
+                label ="S-GRKHS, S1=" + str(s1_list[j]), 
                 linestyle='dashed', color=color[j+1], alpha=0.4)
     line_list += [line2]
 
-plt.axhline(y = (1-0.8736395)**2, color = "red", linewidth = 0.8)
 
-plt.xlabel('Time (sec) + 0.1')
-plt.ylabel('Relative Loss')
+plt.xlabel('Time (sec) + 10')
+plt.ylabel('Loss minus Nominal Loss')
 # Put a legend below current axis
 
 plt.legend(handles = line_list, loc='upper right')
+
 plt.tight_layout()
 
-plt.xscale('log')
 plt.yscale('log')
-plt.savefig('comparison_RKHS_full_r_5.pdf', format = 'pdf')
+plt.xscale('log')
+
+plt.savefig('comparison_poisson_r5.pdf', format = 'pdf')
 
 plt.clf()
 
@@ -118,73 +118,12 @@ plt.clf()
 
 
 
-
-
-
-
-
-
-
-acc_s1_csvfiles = []
-for file in glob.glob("acc_s1*.csv"):
-    acc_s1_csvfiles.append(file)
-    
-res = [(sub.split('s1_')[1]) for sub in acc_s1_csvfiles] 
-res = [int(sub.split('.')[0]) for sub in res]
-s1_list = np.array(res)
-sort_index = np.argsort(s1_list)
-s1_list = s1_list[sort_index]
-acc_s1_csvfiles = [acc_s1_csvfiles[i] for i in sort_index]
-
-shape_tmp = (len(acc_s1_csvfiles),) + np.shape(pd.read_csv(acc_s1_csvfiles[0], sep=",", header=0,index_col=0).to_numpy())
-acc_list_list = np.zeros(shape_tmp)
-
-for i in range(len(acc_s1_csvfiles)):
-    acc_list_list[i,:,:] = pd.read_csv(acc_s1_csvfiles[i], sep=",", header=0,index_col=0).to_numpy()
-
-
-time_s1_csvfiles = []
-for file in glob.glob("time_s1*.csv"):
-    time_s1_csvfiles.append(file)    
-    
-res = [(sub.split('s1_')[1]) for sub in time_s1_csvfiles] 
-res = [int(sub.split('.')[0]) for sub in res]
-s1_list = np.array(res)
-sort_index = np.argsort(s1_list)
-s1_list = s1_list[sort_index]
-time_s1_csvfiles = [time_s1_csvfiles[i] for i in sort_index]
-
-shape_tmp = (len(time_s1_csvfiles),) + np.shape(pd.read_csv(time_s1_csvfiles[0], sep=",", header=0,index_col=0).to_numpy())
-time_list_list = np.zeros(shape_tmp)
-
-for i in range(len(time_s1_csvfiles)):
-    time_list_list[i,:,:] = pd.read_csv(time_s1_csvfiles[i], sep=",", header=0,index_col=0).to_numpy()    
-
-
-time_unsketched = pd.read_csv('time_unsketched.csv', sep=",", header=0,index_col=0).to_numpy()
-acc_unsketched = pd.read_csv('acc_unsketched.csv', sep=",", header=0,index_col=0).to_numpy()
-
-
-time_unsketched_mean = np.mean(time_unsketched, axis=0)
-acc_unsketched_mean = np.mean(acc_unsketched, axis=0)
-
-
-
-acc_list_list = (1 - acc_list_list)**2
-acc_unsketched = (1-acc_unsketched)**2
-
-
-
-
-
-
-
 ticks = np.arange(len(acc_list_list[0][0]))-1
  
 data = np.concatenate((acc_unsketched[np.newaxis,:], acc_list_list))
 
-lable_list = ["S-RKHS, S1="+str(i) for i in s1_list]
-lable_list = ["RKHS"] + lable_list
+lable_list = ["S-GRKHS, S1="+str(i) for i in s1_list]
+lable_list = ["GRKHS"] + lable_list
 
 # create a boxplot for two arrays separately,
 # the position specifies the location of the
@@ -224,24 +163,26 @@ for i in range(len(lable_list)):
 
 
 # set the x label values
-plt.xticks(np.arange(0, len(ticks), 1), ticks + 1)
- 
-plt.axhline(y = (1-0.8736395)**2, color = "red", linewidth = 0.8)
+plt.xticks(np.arange(0, len(ticks), 1), ticks+1)
+
+plt.axhline(y = -53.2111, linestyle = ':', color = "#17becf", linewidth = 0.5)
 # set the limit for x axis
 #plt.xlim(-2, len(ticks)*2)
  
 # set the limit for y axis
-#plt.ylim(0.8, 1.0)
+#plt.ylim(0.02, 20)
+#plt.xlim(0.5, 14.5)
+plt.xlabel('Epoch')
+plt.ylabel('Loss minus Nominal Loss')
 plt.yscale('log')
-
-plt.xlabel('Iteration')
-plt.ylabel('Relative Loss')
-
 plt.tight_layout()
 
-plt.savefig('loss_iteration_RKHS_r_5.pdf', format = 'pdf')
+plt.savefig('loss_iteration_poisson_r5.pdf', format = 'pdf')
 
 plt.clf()
+
+
+
 
 
 
@@ -292,6 +233,9 @@ acc_unsketched = pd.read_csv('acc_unsketched.csv', sep=",", header=0,index_col=0
 time_unsketched_mean = np.mean(time_unsketched, axis=0)
 acc_unsketched_mean = np.mean(acc_unsketched, axis=0)
 
+
+
+
 plt.figure(figsize=(3,3))
 
 data_concatenated = []
@@ -307,9 +251,9 @@ for i in range(len(data)):
 
 
 lable_list = ["S1="+str(i) for i in s1_list]
-lable_list = ["RKHS"] + lable_list 
+lable_list = ["GRKHS"] + lable_list 
 
-plt.boxplot(data_concatenated)
+plt.boxplot(data_concatenated, sym = ".", widths = 0.8)
 
 locs, labels = plt.xticks()
 
@@ -317,7 +261,7 @@ plt.xticks(locs, lable_list, rotation=45)
 
 plt.ylabel('Time (sec)')
 plt.tight_layout()
-plt.savefig('time_box_RKHS_r_5.pdf', format = 'pdf')
+plt.savefig('time_box_poisson_r5.pdf', format = 'pdf')
 plt.clf()
 
 
